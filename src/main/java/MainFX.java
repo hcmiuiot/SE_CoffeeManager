@@ -4,6 +4,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MainFX extends Application {
 
     public static void main(String[] args) {
@@ -13,11 +15,15 @@ public class MainFX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainForm.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
-        Scene mainScene = new Scene(root);
-        primaryStage.setScene(mainScene);
-        primaryStage.setTitle("SE Coffee House Manager");
-        primaryStage.show();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainForm.fxml"));
+            Parent root = loader.load();
+            Scene mainScene = new Scene(root,400,400);
+            primaryStage.setScene(mainScene);
+            primaryStage.setTitle("SE Coffee House Manager");
+            primaryStage.show();
+        } catch ( IOException e) {
+            System.out.println();
+        }
     }
 }
