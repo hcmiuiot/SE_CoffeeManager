@@ -9,7 +9,7 @@ import java.io.IOException;
 public class MainFX extends Application {
 
     public static void main(String[] args) {
-        System.out.printlns("Hello World!");
+        System.out.println("Hello World!");
         launch(args);
     }
 
