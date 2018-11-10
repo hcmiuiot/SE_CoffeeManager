@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
    <children>
-      <Pane prefHeight="768.0" prefWidth="264.0" styleClass="sidebar" stylesheets="@../java/stylesheet.css">
+      <Pane prefHeight="768.0" prefWidth="264.0" styleClass="sidebar" stylesheets="stylesheet.css">
          <effect>
             <DropShadow color="#ddd8d8" />
          </effect>
@@ -25,11 +25,11 @@
                   <Font name="Century Gothic" size="18.0" />
                </font>
             </Label>
-            <VBox alignment="CENTER" layoutY="65.0" prefHeight="400.0" prefWidth="250.0">
+            <VBox alignment="CENTER" layoutY="78.0" prefHeight="400.0" prefWidth="250.0">
                <children>
-                  <JFXButton alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_income" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Home" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_income" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="DashBoard" textFill="#98a0a6">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="HOME" size="1.5em" />
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="LINE_CHART" size="1.5em" />
                      </graphic>
                      <VBox.margin>
                         <Insets left="10.0" top="20.0" />
@@ -38,7 +38,7 @@
                         <Font name="Century Gothic" size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Explore" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Menu" textFill="#98a0a6">
                      <graphic>
                         <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SEARCH" size="1.5em" />
                      </graphic>
@@ -87,9 +87,9 @@
                         <Insets left="10.0" top="20.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exit" prefHeight="50.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Sign Out" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exit" prefHeight="50.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Exit" textFill="#98a0a6">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="LOCK" size="1.5em" />
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SIGN_OUT" size="1.5em" />
                      </graphic>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
