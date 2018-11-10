@@ -1,10 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
    <children>
-      <Label layoutX="189.0" layoutY="171.0" text="Hello World" />
+      <Pane prefHeight="768.0" prefWidth="264.0" styleClass="sidebar" stylesheets="stylesheet.css">
+         <effect>
+            <DropShadow color="#ddd8d8" />
+         </effect>
+         <children>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="HEART_ALT" layoutX="118.0" layoutY="61.0" size="2em" />
+            <Label layoutX="77.0" layoutY="15.0" text="Alien Coffee" textAlignment="CENTER" textFill="#98a0a6">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutY="65.0" prefHeight="400.0" prefWidth="250.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_income" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="DashBoard" textFill="#98a0a6">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="LINE_CHART" size="1.5em" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Menu" textFill="#98a0a6">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SEARCH" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_import" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Import" textFill="#98a0a6">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_export" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Export" textFill="#98a0a6">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_customer" prefHeight="53.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Customer" textFill="#98a0a6">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="USER" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Notifications" textFill="#98a0a6">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="BELL" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exit" prefHeight="50.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Exit" textFill="#98a0a6">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SIGN_OUT" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="710.0" prefHeight="40.0" prefWidth="80.0" styleClass="lblIcon">
+               <graphic>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="GEAR" size="1.5em" />
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="709.0" prefHeight="40.0" prefWidth="80.0" styleClass="lblIcon">
+               <graphic>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="USERS" size="1.5em" />
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="292.0" layoutY="24.0" text="Top Posts" textFill="#98a0a6">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1020.0" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round_lbl" stylesheets="@stylesheet.css" text="8" />
+      <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="BELL" layoutX="1050.0" layoutY="39.0" size="1.5em" />
+      <HBox alignment="CENTER_LEFT" layoutX="1090.0" layoutY="16.0" prefHeight="35.0" prefWidth="250.0" styleClass="search_tf">
+         <effect>
+            <DropShadow color="#eee2e2" />
+         </effect>
+         <children>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#F1F5F8" iconName="SEARCH" size="1.5em">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Search" style="-fx-background-color: transparent;" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="contentArea" layoutX="264.0" prefHeight="768.0" prefWidth="1102.0" styleClass="parent" stylesheets="@stylesheet.css" />
    </children>
 </AnchorPane>
