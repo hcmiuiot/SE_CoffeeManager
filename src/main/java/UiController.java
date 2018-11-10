@@ -28,17 +28,17 @@ public class UiController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        // TODO
-//        makeStageDrageable();
-//        Parent fxml;
-//		try {
-//			fxml = FXMLLoader.load(getClass().getResource("import5.fxml"));
-////		     contentArea.getChildren().removeAll();
-//		        contentArea.getChildren().setAll(fxml);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+        // TODO
+        makeStageDrageable();
+        Parent fxml;
+		try {
+			fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
+		     contentArea.getChildren().removeAll();
+		        contentArea.getChildren().setAll(fxml);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
     }
 
@@ -71,7 +71,7 @@ public class UiController implements Initializable {
 
     @FXML
     void open_import(MouseEvent event) throws IOException {
-//    	  Parent fxml = FXMLLoader.load(getClass().getResource("import.fxml"));
+//    	  Parent fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
 //          contentArea.getChildren().removeAll();
 //          contentArea.getChildren().setAll(fxml);
       }
