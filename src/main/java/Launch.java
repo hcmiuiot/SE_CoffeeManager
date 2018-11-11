@@ -23,7 +23,7 @@ public class Launch extends Application {
     public static Stage stage = null;
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
+        Parent root = FXMLLoader.load(getvClass().getResource("MainForm.fxml"));
         Scene scene = new Scene(root);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
