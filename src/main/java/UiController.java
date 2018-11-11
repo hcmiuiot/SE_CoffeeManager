@@ -98,7 +98,7 @@ public class UiController implements Initializable {
                 System.exit(0);
             }
         };
-            timer.schedule(exitApp, new Date(System.currentTimeMillis()+75*10));
+            timer.schedule(exitApp, new Date(System.currentTimeMillis()+75*1));
     }
     @FXML
     void open_income(MouseEvent event) throws IOException {
