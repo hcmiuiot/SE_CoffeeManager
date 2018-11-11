@@ -3,9 +3,13 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -14,33 +18,41 @@
 
 <AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
    <children>
-      <Pane prefHeight="768.0" prefWidth="264.0" styleClass="sidebar" stylesheets="stylesheet.css">
+      <Pane prefHeight="768.0" prefWidth="264.0" style="-fx-background-color: #212121;" styleClass="sidebar" stylesheets="stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
             <DropShadow color="#ddd8d8" />
          </effect>
          <children>
-            <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="HEART_ALT" layoutX="118.0" layoutY="61.0" size="2em" />
-            <Label layoutX="77.0" layoutY="15.0" text="Alien Coffee" textAlignment="CENTER" textFill="#98a0a6">
-               <font>
-                  <Font name="Century Gothic" size="18.0" />
-               </font>
-            </Label>
-            <VBox alignment="CENTER" layoutY="78.0" prefHeight="400.0" prefWidth="250.0">
+            <VBox alignment="CENTER" layoutY="-1.0" prefHeight="707.0" prefWidth="264.0">
                <children>
-                  <JFXButton alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_income" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="DashBoard" textFill="#98a0a6">
+                  <ImageView fitHeight="155.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.7;" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@logo2.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <effect>
+                        <Reflection fraction="0.46" topOpacity="0.26" />
+                     </effect>
+                  </ImageView>
+                  <JFXButton alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_income" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="DashBoard" textFill="WHITE">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="LINE_CHART" size="1.5em" />
+                        <FontAwesomeIcon fill="#a1a1a1" glyphStyle="-fx-fill:#98A0A6;" iconName="LINE_CHART" size="1.5em" />
                      </graphic>
                      <VBox.margin>
-                        <Insets left="10.0" top="20.0" />
+                        <Insets left="10.0" top="50.0" />
                      </VBox.margin>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Menu" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Menu" textFill="WHITE">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SEARCH" size="1.5em" />
+                        <FontAwesomeIcon fill="#a1a1a1" glyphStyle="-fx-fill:#98A0A6;" iconName="SEARCH" size="1.5em" />
                      </graphic>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
@@ -48,26 +60,42 @@
                      <VBox.margin>
                         <Insets left="10.0" top="15.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_import" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Drinks" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_import" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Drinks" textFill="WHITE">
                      <font>
                         <Font name="Century Gothic" size="14.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="30.0" top="5.0" />
                      </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon fill="#a1a1a1" iconName="COFFEE" size="1.4em">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                     </graphic>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_export" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Cakes" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_export" prefHeight="50.0" prefWidth="220.0" ripplerFill="#a0e4db" styleClass="buttons" text="Cakes" textFill="WHITE">
                      <font>
                         <Font name="Century Gothic" size="14.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="30.0" top="5.0" />
                      </VBox.margin>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_customer" prefHeight="53.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Customer" textFill="#98a0a6">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="USER" size="1.5em" />
+                        <FontAwesomeIcon fill="#a1a1a1" iconName="APPLE" size="1.4em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_customer" prefHeight="53.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Customer" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="#a1a1a1" glyphStyle="-fx-fill:#98A0A6;" iconName="USER" size="1.5em" />
                      </graphic>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
@@ -75,10 +103,13 @@
                      <VBox.margin>
                         <Insets left="10.0" top="20.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Notifications" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0" ripplerFill="#a0e4db" styleClass="buttons" text="Notifications" textFill="WHITE">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="BELL" size="1.5em" />
+                        <FontAwesomeIcon fill="#a1a1a1" glyphStyle="-fx-fill:#98A0A6;" iconName="BELL" size="1.5em" />
                      </graphic>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
@@ -86,10 +117,13 @@
                      <VBox.margin>
                         <Insets left="10.0" top="20.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exit" prefHeight="50.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Exit" textFill="#98a0a6">
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exit" prefHeight="50.0" prefWidth="235.0" ripplerFill="#a0e4db" styleClass="buttons" text="Exit" textFill="WHITE">
                      <graphic>
-                        <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="SIGN_OUT" size="1.5em" />
+                        <FontAwesomeIcon fill="#a1a1a1" glyphStyle="-fx-fill:#98A0A6;" iconName="SIGN_OUT" size="1.5em" />
                      </graphic>
                      <font>
                         <Font name="Century Gothic" size="14.0" />
@@ -97,6 +131,9 @@
                      <VBox.margin>
                         <Insets left="10.0" top="20.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
             </VBox>
