@@ -71,9 +71,9 @@ public class UiController implements Initializable {
 
     @FXML
     void open_import(MouseEvent event) throws IOException {
-//    	  Parent fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
-//          contentArea.getChildren().removeAll();
-//          contentArea.getChildren().setAll(fxml);
+    	  Parent fxml = FXMLLoader.load(getClass().getResource("Drinks.fxml"));
+          contentArea.getChildren().removeAll();
+          contentArea.getChildren().setAll(fxml);
       }
 
 
