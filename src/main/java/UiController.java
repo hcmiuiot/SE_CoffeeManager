@@ -117,7 +117,7 @@ public class UiController implements Initializable {
 
     @FXML
     void minimize(MouseEvent event) {
-//        Launch.stage.setIconified(true);
+        Launch.stage.setIconified(true);
 
     }
 
