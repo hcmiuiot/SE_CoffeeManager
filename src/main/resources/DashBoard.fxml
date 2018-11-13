@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -13,159 +13,154 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main" prefHeight="766.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoardController">
+<AnchorPane fx:id="main" prefHeight="766.0" prefWidth="1100.0" style="-fx-background-color: #32323E;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoardController">
    <children>
-      <Label layoutX="28.0" layoutY="24.0" text="Top Posts" textFill="#98a0a6">
-         <font>
-            <Font name="Century Gothic Bold" size="15.0" />
-         </font>
-      </Label>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="756.0" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round_lbl" stylesheets="@stylesheet.css" text="8" />
-      <FontAwesomeIcon glyphStyle="-fx-fill:#98A0A6;" iconName="BELL" layoutX="786.0" layoutY="39.0" size="1.5em" />
+      <FontAwesomeIconView glyphName="BELL" glyphStyle="-fx-fill:#98A0A6;" layoutX="786.0" layoutY="39.0" size="1.5em" />
       <HBox alignment="CENTER_LEFT" layoutX="826.0" layoutY="16.0" prefHeight="35.0" prefWidth="250.0" styleClass="search_tf" stylesheets="@stylesheet.css">
          <children>
-            <FontAwesomeIcon glyphStyle="-fx-fill:#F1F5F8" iconName="SEARCH" size="1.5em">
+            <FontAwesomeIconView fill="#fdfdfd" glyphName="SEARCH" glyphStyle="-fx-fill:#98A0A6;" size="1.5em">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
-            </FontAwesomeIcon>
+            </FontAwesomeIconView>
             <TextField fx:id="jtfSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Search" style="-fx-background-color: transparent;" />
          </children>
       </HBox>
-      <Pane layoutX="42.0" layoutY="102.0" prefHeight="52.0" prefWidth="1010.0" style="-fx-background-color: white;">
+      <Pane layoutX="42.0" layoutY="102.0" prefHeight="52.0" prefWidth="1010.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="56.0" prefWidth="196.0" text="Income this month:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="56.0" prefWidth="196.0" text="Income this month:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="765.0" prefHeight="56.0" prefWidth="196.0" text="\$0" textFill="#a0e4db">
-               <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutX="42.0" layoutY="157.0" prefHeight="52.0" prefWidth="1010.0" style="-fx-background-color: white;">
-         <children>
-            <Label layoutX="91.0" prefHeight="56.0" prefWidth="196.0" text="Profit this month: " textFill="#888888">
-               <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="765.0" prefHeight="56.0" prefWidth="196.0" text="\$0" textFill="#55c3b4">
+            <Label layoutX="765.0" prefHeight="56.0" prefWidth="196.0" text="\$0" textFill="#8875f9">
                <font>
                   <Font name="Century Gothic Bold" size="18.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="42.0" layoutY="244.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="42.0" layoutY="157.0" prefHeight="52.0" prefWidth="1010.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income last month:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="56.0" prefWidth="196.0" text="Profit this month: " textFill="#e5e5e5">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="765.0" prefHeight="56.0" prefWidth="196.0" text="\$0" textFill="#fe67c3">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="42.0" layoutY="244.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #272730;">
+         <children>
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income last month:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1350" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1350" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="42.0" layoutY="292.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="42.0" layoutY="292.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income two month ago:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income two month ago:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1475" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1475" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="42.0" layoutY="340.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="42.0" layoutY="340.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income this year:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income this year:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$7405" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$7405" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="42.0" layoutY="388.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="42.0" layoutY="388.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income last year:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Income last year:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1260" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1260" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="549.0" layoutY="244.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="549.0" layoutY="244.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit last month:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit last month:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$270" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$270" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="549.0" layoutY="292.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="549.0" layoutY="292.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit two month ago" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit two month ago" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$295" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$295" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="549.0" layoutY="340.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="549.0" layoutY="340.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit this year:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit this year:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1481" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$1481" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="549.0" layoutY="388.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: white;">
+      <Pane layoutX="549.0" layoutY="388.0" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #272730;">
          <children>
-            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit last year:" textFill="#888888">
+            <Label layoutX="91.0" prefHeight="45.0" prefWidth="196.0" text="Profit last year:" textFill="#e5e5e5">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$269.315" textFill="#000000b5">
+            <Label layoutX="370.0" prefHeight="45.0" prefWidth="196.0" text="\$269.315" textFill="#ffffffd3">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
@@ -177,7 +172,7 @@
             <Font name="Century Gothic Bold" size="20.0" />
          </font>
       </Label>
-      <AreaChart fx:id="areachart" alternativeColumnFillVisible="true" createSymbols="false" horizontalGridLinesVisible="false" layoutX="24.0" layoutY="469.0" legendSide="TOP" legendVisible="false" prefHeight="295.0" prefWidth="1033.0" style="-fx-background-color: transparent;" styleClass="default-color2" stylesheets="@Chart.css" verticalGridLinesVisible="false">
+      <AreaChart fx:id="areachart" alternativeColumnFillVisible="true" createSymbols="false" horizontalGridLinesVisible="false" layoutX="24.0" layoutY="469.0" legendSide="TOP" legendVisible="false" prefHeight="295.0" prefWidth="1033.0" style="-fx-background-color: #32323E; -fx-legend-visible: false; }.chart-content {    -fx-padding: 30px; }.chart-title {    -fx-text-fill: #ffffff; -fx-font-size: 1.6em; }.axis-label {    -fx-text-fill: #ffffff; }.chart-plot-background {    -fx-background-color: transparent; }.chart-vertical-grid-lines {    -fx-stroke: #505050; }.chart-horizontal-grid-lines {    -fx-stroke: #505050; }.chart-alternative-row-fill {    -fx-fill: transparent; -fx-stroke: transparent; }.default-color0.chart-series-line {    -fx-stroke: #0000ff; }.default-color0.chart-line-symbol {    -fx-background-color: #0000ff, white; }: ; -fx-legend-visible: false;" styleClass="default-color2" stylesheets="@Chart.css" verticalGridLinesVisible="false">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

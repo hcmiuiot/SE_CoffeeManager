@@ -17,7 +17,7 @@
 .buttons:hover{
     -fx-background-color: transparent;
     -fx-background-radius: 0px;    
-    -fx-border-color: #55C3B4;
+    -fx-border-color: #8875F9;
     -fx-border-radius: 0px;
     -fx-border-style: solid;
     -fx-border-width: 0px 0px 0px 2px;
@@ -29,13 +29,13 @@
 .lblIcon:hover{
     -fx-background-color: #F1F5F8;
     -fx-background-radius: 0px;    
-    -fx-border-color: #55C3B4;
+    -fx-border-color: #8875F9;
     -fx-border-radius: 0px;
     -fx-border-width: 0px 0px 2px 0px;    
 }
 
 .round_lbl{
-    -fx-background-color: #55C3B4;
+    -fx-background-color: #8875F9;
     -fx-background-radius: 100px;
     -fx-text-fill: #ffffff;
 }
@@ -46,4 +46,10 @@
 }
 .jfx-date-picker .jfx-text-field{
     -jfx-unfocus-color: #98a0a6;
+}
+
+.roundButton.setStyle {
+    -fx-background-color: #8875F9;
+    -fx-border-radius: 20px;
+    -fx-text-fill: #ffffff;
 }
