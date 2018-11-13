@@ -23,17 +23,17 @@ matrix:
     env:
     - _JAVA_OPTIONS="-Dtestfx.robot=awt"
   # Ubuntu Linux (trusty) / Oracle JDK 8 / Headed (Glass Robot) / HiDPI
-  - os: linux
-    dist: trusty
-    jdk: oraclejdk11
-    env:
-    - _JAVA_OPTIONS="-Dtestfx.robot=glass -Dglass.gtk.uiScale=2.0"
+#  - os: linux
+#    dist: trusty
+#    jdk: oraclejdk11
+#    env:
+#    - _JAVA_OPTIONS="-Dtestfx.robot=glass -Dglass.gtk.uiScale=2.0"
   # Ubuntu Linux (trusty) / Oracle JDK 8 / Headless
-  - os: linux
-    dist: trusty
-    jdk: oraclejdk11
-    env:
-    - _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw"
+#  - os: linux
+#    dist: trusty
+#    jdk: oraclejdk11
+#    env:
+#    - _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw"
   # macOS / Oracle JDK 8 / Headless
 #  - os: osx
 #    osx_image: xcode9.4
