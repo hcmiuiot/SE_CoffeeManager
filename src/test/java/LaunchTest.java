@@ -11,9 +11,6 @@ import org.testfx.framework.junit.ApplicationTest;
 
 import java.util.concurrent.TimeoutException;
 
-import static org.testfx.api.FxAssert.verifyThat;
-import static org.testfx.matcher.control.LabeledMatchers.hasText;
-
 public class LaunchTest extends ApplicationTest {
 
 //    @Before
@@ -37,10 +34,10 @@ public class LaunchTest extends ApplicationTest {
         scene.getStylesheets().getClass().getResource("Chart.css");
     }
 
-    @Test
-    public void should_test() {
-        verifyThat(".button", hasText("DashBoard"));
-    }
+//    @Test
+//    public void should_test() {
+//        verifyThat(".button", hasText("DashBoard"));
+//    }
 
     @Test
     public void should_test_2() {
