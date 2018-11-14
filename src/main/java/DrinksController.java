@@ -52,7 +52,10 @@ public class DrinksController implements Initializable {
             }
             scroll_pane.setContent(container);
             scroll_pane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-            //scroll_pane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+            scroll_pane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+            scroll_pane.setFitToWidth(true);
+            scroll_pane.setPannable(true);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -62,6 +65,7 @@ public class DrinksController implements Initializable {
     @FXML
     private void filter(ActionEvent event) {
     }
+
 
 
 
