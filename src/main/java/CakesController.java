@@ -28,13 +28,13 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 import javafx.fxml.FXMLLoader;
 
-public class DrinksController implements Initializable {
+public class CakesController implements Initializable {
     private ResultSet result;
 
     @FXML
     private AnchorPane main;
     @FXML
-    private JFXTreeTableView<Product> treeView;
+    private JFXTreeTableView<User> treeView;
     @FXML
     private TextField jtfSearch;
     @FXML
@@ -47,8 +47,8 @@ public class DrinksController implements Initializable {
         Parent fxml = null;
         try {
             for (int i = 0 ; i<= 10 ; i++){
-                fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
-                container.getChildren().add(fxml);
+            fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
+            container.getChildren().add(fxml);
             }
             scroll_pane.setContent(container);
             scroll_pane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
@@ -74,7 +74,7 @@ public class DrinksController implements Initializable {
         StringProperty date;
         //StringProperty amount3;
 
-        public Product(String amount, String productID, String name, String price, String date, String amount3) {
+        public User(String amount, String productID, String name, String price, String date, String amount3) {
             this.amount = new SimpleStringProperty(amount);
             this.name = new SimpleStringProperty(name);
             this.productID = new SimpleStringProperty(productID);
