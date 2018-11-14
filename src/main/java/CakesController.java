@@ -28,7 +28,7 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 import javafx.fxml.FXMLLoader;
 
-public class DrinksController implements Initializable {
+public class CakesController implements Initializable {
     private ResultSet result;
 
     @FXML
@@ -47,8 +47,8 @@ public class DrinksController implements Initializable {
         Parent fxml = null;
         try {
             for (int i = 0 ; i<= 10 ; i++){
-                fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
-                container.getChildren().add(fxml);
+            fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
+            container.getChildren().add(fxml);
             }
             scroll_pane.setContent(container);
             scroll_pane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);

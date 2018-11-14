@@ -78,7 +78,7 @@ public class UiController implements Initializable {
 
 
     @FXML
-    void open_import(MouseEvent event) throws IOException {
+    void open_drink(MouseEvent event) throws IOException {
     	  Parent fxml = FXMLLoader.load(getClass().getResource("Drinks.fxml"));
           contentArea.getChildren().removeAll();
           contentArea.getChildren().setAll(fxml);
@@ -86,10 +86,10 @@ public class UiController implements Initializable {
 
 
     @FXML
-    void open_export(MouseEvent event) throws IOException {
-//    	 Parent fxml = FXMLLoader.load(getClass().getResource("import2.fxml"));
-//         contentArea.getChildren().removeAll();
-//         contentArea.getChildren().setAll(fxml);
+    void open_cake(MouseEvent event) throws IOException {
+    	 Parent fxml = FXMLLoader.load(getClass().getResource("Cake.fxml"));
+         contentArea.getChildren().removeAll();
+         contentArea.getChildren().setAll(fxml);
     }
 
     @FXML
@@ -98,6 +98,7 @@ public class UiController implements Initializable {
 //        contentArea.getChildren().removeAll();
 //        contentArea.getChildren().setAll(fxml);
    }
+
     @FXML
     void exit(MouseEvent event) {
         Timer timer = new Timer();
@@ -109,15 +110,19 @@ public class UiController implements Initializable {
             timer.schedule(exitApp, new Date(System.currentTimeMillis()+80*1));
     }
     @FXML
-    void open_income(MouseEvent event) throws IOException {
-//    	Parent fxml = FXMLLoader.load(getClass().getResource("import4.fxml"));
-//        contentArea.getChildren().removeAll();
-//        contentArea.getChildren().setAll(fxml);
+    void open_dashboard (MouseEvent event) throws IOException {
+    	Parent fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
     }
 
     @FXML
     void minimize(MouseEvent event) {
         Launch.stage.setIconified(true);
+
+    }
+    @FXML
+    void open_notification(MouseEvent event) {
 
     }
 
