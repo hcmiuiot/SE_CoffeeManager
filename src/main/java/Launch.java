@@ -1,14 +1,3 @@
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,9 +23,6 @@ public class Launch extends Application {
 
 
     public static void main(String[] args) {
-
-
         launch(args);
-
     }
 }

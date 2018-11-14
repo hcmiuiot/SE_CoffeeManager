@@ -4,6 +4,7 @@ import java.sql.Time;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import javafx.scene.shape.Circle;
 
 public class UiController implements Initializable {
 
@@ -24,6 +26,12 @@ public class UiController implements Initializable {
 
     @FXML
     private AnchorPane contentArea;
+
+    @FXML
+    private JFXButton exit_buttom;
+
+    @FXML
+    private JFXButton minimal_buton;
 
 
     @Override
@@ -70,7 +78,7 @@ public class UiController implements Initializable {
 
 
     @FXML
-    void open_import(MouseEvent event) throws IOException {
+    void open_drink(MouseEvent event) throws IOException {
     	  Parent fxml = FXMLLoader.load(getClass().getResource("Drinks.fxml"));
           contentArea.getChildren().removeAll();
           contentArea.getChildren().setAll(fxml);
@@ -78,10 +86,10 @@ public class UiController implements Initializable {
 
 
     @FXML
-    void open_export(MouseEvent event) throws IOException {
-//    	 Parent fxml = FXMLLoader.load(getClass().getResource("import2.fxml"));
-//         contentArea.getChildren().removeAll();
-//         contentArea.getChildren().setAll(fxml);
+    void open_cake(MouseEvent event) throws IOException {
+    	 Parent fxml = FXMLLoader.load(getClass().getResource("Cake.fxml"));
+         contentArea.getChildren().removeAll();
+         contentArea.getChildren().setAll(fxml);
     }
 
     @FXML
@@ -90,6 +98,7 @@ public class UiController implements Initializable {
 //        contentArea.getChildren().removeAll();
 //        contentArea.getChildren().setAll(fxml);
    }
+
     @FXML
     void exit(MouseEvent event) {
         Timer timer = new Timer();
@@ -98,13 +107,23 @@ public class UiController implements Initializable {
                 System.exit(0);
             }
         };
-            timer.schedule(exitApp, new Date(System.currentTimeMillis()+75*1));
+            timer.schedule(exitApp, new Date(System.currentTimeMillis()+80*1));
     }
     @FXML
-    void open_income(MouseEvent event) throws IOException {
-//    	Parent fxml = FXMLLoader.load(getClass().getResource("import4.fxml"));
-//        contentArea.getChildren().removeAll();
-//        contentArea.getChildren().setAll(fxml);
+    void open_dashboard (MouseEvent event) throws IOException {
+    	Parent fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+    }
+
+    @FXML
+    void minimize(MouseEvent event) {
+        Launch.stage.setIconified(true);
+
+    }
+    @FXML
+    void open_notification(MouseEvent event) {
+
     }
 
 }
