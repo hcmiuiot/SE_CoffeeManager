@@ -5,11 +5,14 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.testfx.api.FxAssert;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
 import java.util.concurrent.TimeoutException;
+
+import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
 public class LaunchTest extends ApplicationTest {
 
@@ -34,15 +37,15 @@ public class LaunchTest extends ApplicationTest {
         scene.getStylesheets().getClass().getResource("Chart.css");
     }
 
-//    @Test
-//    public void should_test() {
-//        verifyThat(".button", hasText("DashBoard"));
-//    }
-
     @Test
-    public void should_test_2() {
-        clickOn("Drinks");
-        //verifyThat(".button", hasText("Exit"));
+    public void should_test() {
+        FxAssert.verifyThat(".button", hasText("    DashBoard"));
     }
+
+//    @Test
+//    public void should_test_2() {
+////        clickOn("Drinks");
+//        //verifyThat(".button", hasText("Exit"));
+//    }
 
 }
