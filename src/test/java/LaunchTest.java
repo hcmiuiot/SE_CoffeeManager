@@ -5,7 +5,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.junit.After;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.testfx.api.FxAssert;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
@@ -39,7 +39,7 @@ public class LaunchTest extends ApplicationTest {
 
     @Test
     public void should_test() {
-        FxAssert.verifyThat(".button", hasText("    DashBoard"));
+        FxAssert.verifyThat("    DashBoard", hasText("    DashBoard"));
     }
 
 //    @Test
