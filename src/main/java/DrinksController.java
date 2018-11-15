@@ -25,29 +25,28 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.function.Predicate;
 import javafx.fxml.FXMLLoader;
 
 public class DrinksController implements Initializable {
-    private ResultSet result;
+    public static ResultSet result;
 
     @FXML
     private AnchorPane main;
-    @FXML
-    private JFXTreeTableView<User> treeView;
     @FXML
     private TextField jtfSearch;
     @FXML
     private ScrollPane scroll_pane;
     @FXML
     private FlowPane container;
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         Parent fxml = null;
+        loadDB();
         try {
-            for (int i = 0 ; i<= 10 ; i++){
+            while (result.next()) {
                 fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
+                System.out.println("chay di ma lam on ");
                 container.getChildren().add(fxml);
             }
             scroll_pane.setContent(container);
@@ -59,6 +58,9 @@ public class DrinksController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -66,27 +68,19 @@ public class DrinksController implements Initializable {
     private void filter(ActionEvent event) {
     }
 
+    public void loadDB() {
+        try {
+            DbHandler.getInstance();
+            result = DbHandler.ExecSQL("SELECT * FROM `Database`.Products");
+            result.first();
 
 
-
-    class User extends RecursiveTreeObject<User> {
-
-        StringProperty name;
-        StringProperty productID;
-        StringProperty amount;
-        StringProperty price;
-        StringProperty date;
-        //StringProperty amount3;
-
-        public User(String amount, String productID, String name, String price, String date, String amount3) {
-            this.amount = new SimpleStringProperty(amount);
-            this.name = new SimpleStringProperty(name);
-            this.productID = new SimpleStringProperty(productID);
-            this.price = new SimpleStringProperty(price);
-            this.date = new SimpleStringProperty(date);
-            //this.amount3 = new SimpleStringProperty(amount3);
 
         }
-
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
+
 }

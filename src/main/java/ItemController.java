@@ -14,12 +14,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.Parent;
 import javafx.scene.layout.FlowPane;
-
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -27,42 +30,47 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.StackPane;
 
-public class CakesController implements Initializable {
-    private ResultSet result;
+public class ItemController implements Initializable {
+
+
 
     @FXML
-    private AnchorPane main;
+    private Label Tile;
+
     @FXML
-    private TextField jtfSearch;
+    private Label description;
+
     @FXML
-    private ScrollPane scroll_pane;
+    private Label price;
+
     @FXML
-    private FlowPane container;
+    private StackPane image_box;
+
+    @FXML
+    private ImageView imgView;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        Parent fxml = null;
-//        try {
-//            for (int i = 0 ; i<= 10 ; i++){
-//            fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
-//            container.getChildren().add(fxml);
-//            }
-//            scroll_pane.setContent(container);
-//            scroll_pane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-//            scroll_pane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-//            scroll_pane.setFitToWidth(true);
-//            scroll_pane.setPannable(true);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
+        try {
+            Tile.setText(DrinksController.result.getString("product_name"));
+            description.setText(DrinksController.result.getString("product_description"));
+            price.setText(DrinksController.result.getString("product_price")+" Đ");
+            imgView = new ImageView(new Image(DrinksController.result.getString("product_image")));
+            imgView.setFitHeight(100);
+            imgView.setFitWidth(100);
+            image_box.getChildren().add(imgView);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     @FXML
     private void filter(ActionEvent event) {
     }
-
-
 
 }
