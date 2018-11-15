@@ -19,7 +19,6 @@ import javafx.scene.shape.Circle;
 
 public class UiController implements Initializable {
 
-	
     @FXML
     private AnchorPane parent;
     private double xOffset = 0;
