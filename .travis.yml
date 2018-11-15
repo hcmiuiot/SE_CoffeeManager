@@ -1,13 +1,6 @@
 language: java
 notifications:
-  email:
-    recipients:
-      - hungthuanmk@gmail.com
-      - tranduckhoatcu@gmail.com
-      - lt1679848@gmail.com
-      - trungnguyen10051998@gmail.com
-    on_success: always # default: change
-    on_failure: always # default: always
+  slack: hcmiuiotclub:XXa9fURMSw6YOhM2Lptat411
 
 cache:
   directories:
