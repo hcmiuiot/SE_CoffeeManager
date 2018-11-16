@@ -1,6 +1,8 @@
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.junit.After;
 import org.junit.Test;
@@ -17,8 +19,8 @@ public class LaunchTest extends ApplicationTest {
     @After
     public void afterEachTest() throws TimeoutException {
 //        FxToolkit.hideStage();
-//        release(new KeyCode[]{});
-//        release(new MouseButton[]{});
+        release(new KeyCode[]{});
+        release(new MouseButton[]{});
     }
 
     @Override
@@ -39,7 +41,7 @@ public class LaunchTest extends ApplicationTest {
         clickOn("Cakes");
         clickOn("Customer");
         clickOn("Notifications");
-        clickOn("Exit");
+        //clickOn("Exit");
     }
 
 //    @Test
