@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 20px;" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
+<AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 20px;" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
    <children>
       <Pane prefHeight="768.0" prefWidth="264.0" style="-fx-background-color: #272730;" styleClass="sidebar" stylesheets="stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
@@ -103,12 +103,12 @@
                <font>
                   <Font size="5.0" />
                </font></JFXButton>
-            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="11.0" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #ffc02e; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="maximize_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="11.0" onAction="#maximizeWindow" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #ffc02e; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="5.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="minimal_buton" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="11.0" onMouseClicked="#minimize" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #2ace42; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="minimal_buton" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="11.0" onMouseClicked="#minimizeWindow" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #2ace42; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="5.0" />
                </font>
@@ -135,6 +135,6 @@
             <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Search" style="-fx-background-color: transparent;" />
          </children>
       </HBox>
-      <AnchorPane fx:id="contentArea" layoutX="264.0" prefHeight="768.0" prefWidth="1102.0" style="-fx-background-color: #32323E;" styleClass="parent" stylesheets="@stylesheet.css" />
+      <AnchorPane fx:id="contentArea" layoutX="264.0" prefHeight="768.0" prefWidth="1102.0" style="-fx-background-color: #32323E;" styleClass="parent" stylesheets="@stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>
