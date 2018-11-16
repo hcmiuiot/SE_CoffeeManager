@@ -1,18 +1,12 @@
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.junit.After;
 import org.junit.Test;
-import org.testfx.api.FxAssert;
-import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
 import java.util.concurrent.TimeoutException;
-
-import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
 public class LaunchTest extends ApplicationTest {
 
@@ -22,9 +16,9 @@ public class LaunchTest extends ApplicationTest {
 //    }
     @After
     public void afterEachTest() throws TimeoutException {
-        FxToolkit.hideStage();
-        release(new KeyCode[]{});
-        release(new MouseButton[]{});
+//        FxToolkit.hideStage();
+//        release(new KeyCode[]{});
+//        release(new MouseButton[]{});
     }
 
     @Override
@@ -38,8 +32,14 @@ public class LaunchTest extends ApplicationTest {
     }
 
     @Test
-    public void should_test() {
-        FxAssert.verifyThat(".button", hasText("    DashBoard"));
+    public void should_clickable_items() {
+        clickOn("DashBoard");
+        clickOn("Menu");
+        clickOn("Drinks");
+        clickOn("Cakes");
+        clickOn("Customer");
+        clickOn("Notifications");
+        clickOn("Exit");
     }
 
 //    @Test
