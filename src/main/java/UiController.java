@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -50,15 +51,26 @@ public class UiController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         makeStageDrageable();
-        Parent fxml;
         try {
-            fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
-            contentArea.getChildren().removeAll();
-            contentArea.getChildren().setAll(fxml);
+            changeContentArea("DashBoard.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    // This remove completely current ContentArea then load again the new one...
+    private void changeContentArea(String FXMLPath) throws IOException {
+        Node fxml = FXMLLoader.load(getClass().getResource(FXMLPath));
+        contentArea.getChildren().removeAll();
+        fixedBorderAnchor(fxml);
+        contentArea.getChildren().setAll(fxml);
+    }
+
+    private void fixedBorderAnchor(Node pane) {
+        contentArea.setLeftAnchor(pane, 0.0);
+        contentArea.setRightAnchor(pane, 0.0);
+        contentArea.setTopAnchor(pane, 0.0);
+        contentArea.setBottomAnchor(pane, 0.0);
     }
 
     private void makeStageDrageable() {
@@ -92,7 +104,7 @@ public class UiController implements Initializable {
 //            System.out.println("Y = " + e.getY());
             Launch.stage.setOpacity(1.0f);
             //Unexpected work.. will fix later =))
-            if (Launch.stage.getY() < 10 && isMaximize==false){
+            if (Launch.stage.getY() < 10 && !isMaximize) {
                 maximize_btn.fire();
             }
         });
@@ -102,17 +114,13 @@ public class UiController implements Initializable {
 
     @FXML
     void open_drink(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("Drinks.fxml"));
-        contentArea.getChildren().removeAll();
-        contentArea.getChildren().setAll(fxml);
+        changeContentArea("Drinks.fxml");
     }
 
 
     @FXML
     void open_cake(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("Cake.fxml"));
-        contentArea.getChildren().removeAll();
-        contentArea.getChildren().setAll(fxml);
+        changeContentArea("Cake.fxml");
     }
 
     @FXML
@@ -135,9 +143,7 @@ public class UiController implements Initializable {
 
     @FXML
     void open_dashboard(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
-        contentArea.getChildren().removeAll();
-        contentArea.getChildren().setAll(fxml);
+        changeContentArea("DashBoard.fxml");
     }
 
     @FXML
@@ -146,7 +152,7 @@ public class UiController implements Initializable {
         Screen scr = Screen.getPrimary();
         Rectangle2D bounds = scr.getVisualBounds();
 
-        if (this.isMaximize != true) {
+        if (!this.isMaximize) {
             Launch.stage.setX(bounds.getMinX());
             Launch.stage.setY(bounds.getMinY());
             Launch.stage.setWidth(bounds.getWidth());
@@ -164,7 +170,6 @@ public class UiController implements Initializable {
     @FXML
     void minimizeWindow(MouseEvent event) {
         Launch.stage.setIconified(true);
-
     }
 
     @FXML
