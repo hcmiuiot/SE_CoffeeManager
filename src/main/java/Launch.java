@@ -10,6 +10,7 @@ public class Launch extends Application {
 
 
     public static Stage stage = null;
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
@@ -17,6 +18,7 @@ public class Launch extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         this.stage = stage;
+        stage.setResizable(true);
         stage.show();
         scene.getStylesheets().getClass().getResource("Chart.css");
     }
