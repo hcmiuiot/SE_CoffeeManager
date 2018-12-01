@@ -62,7 +62,7 @@ public class DrinksController implements Initializable {
     public void loadDB() {
         try {
             DbHandler.getInstance();
-            result = DbHandler.ExecSQL("SELECT * FROM `Database`.Products");
+            result = DbHandler.ExecSQL("SELECT * FROM SE_Coffee_Manager.Items");
             result.first();
 
 
