@@ -85,7 +85,7 @@ public class LoginController {
     public void loadDB() {
         // try {
         DbHandler.getInstance();
-        String command = " SELECT PassWord FROM `Database`.Account where userName='" + id_input.getText() + "'";
+        String command = " SELECT password FROM SE_Coffee_Manager.User where username='" + id_input.getText() + "'";
         result = DbHandler.ExecSQL(command);
 //        //result.first();
 //        }
