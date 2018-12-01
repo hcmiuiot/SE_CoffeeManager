@@ -55,10 +55,10 @@ public class ItemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            Tile.setText(DrinksController.result.getString("product_name"));
-            description.setText(DrinksController.result.getString("product_description"));
-            price.setText(DrinksController.result.getString("product_price")+" Đ");
-            imgView = new ImageView(new Image(DrinksController.result.getString("product_image")));
+            Tile.setText(DrinksController.result.getString("name"));
+            description.setText(DrinksController.result.getString("description"));
+            price.setText(DrinksController.result.getString("price")+" Đ");
+            imgView = new ImageView(new Image(DrinksController.result.getString("image")));
             imgView.setFitHeight(100);
             imgView.setFitWidth(100);
             image_box.getChildren().add(imgView);
