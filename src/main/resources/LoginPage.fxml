@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #32323E;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <JFXButton fx:id="SignInButton" layoutX="224.0" layoutY="533.0" onAction="#onsignin" text="Sign in" textFill="WHITE" />
+      <JFXTextField fx:id="id_input" focusColor="WHITE" labelFloat="true" layoutX="139.0" layoutY="336.0" prefHeight="45.0" prefWidth="225.0" promptText="ID" style="-fx-text-inner-color: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="exit_buttom" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" onMouseClicked="#exit" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #ff6158; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="5.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="maximize_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="14.0" onAction="#maximizeWindow" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #ffc02e; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="5.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="minimal_buton" alignment="CENTER" contentDisplay="CENTER" layoutX="59.0" layoutY="14.0" onMouseClicked="#minimizeWindow" prefHeight="0.0" prefWidth="12.0" style="-fx-background-color: #2ace42; -fx-background-radius: 6;" styleClass="roundButton" text=" " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="5.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="psw" focusColor="WHITE" labelFloat="true" layoutX="138.0" layoutY="431.0" onAction="#onsignin" prefHeight="44.0" prefWidth="225.0" promptText="Password" style="-fx-text-inner-color: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXPasswordField>
+      <WeatherIconView glyphName="ALIEN" layoutX="212.0" layoutY="274.0" size="100">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#8875f9" />
+                  <Stop color="#8374f2a2" offset="0.007662835249042145" />
+                  <Stop color="#fa6ec49c" offset="0.8681913338863206" />
+                  <Stop color="#fa6ec49c" offset="0.9731800766283525" />
+                  <Stop color="#8875f9fa" offset="0.9923371647509578" />
+                  <Stop color="#8875f9fa" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></WeatherIconView>
+   </children>
+</AnchorPane>
