@@ -11,9 +11,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 20px;" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
+<AnchorPane fx:id="parent" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 20px;" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UiController">
    <children>
       <Pane prefHeight="768.0" prefWidth="264.0" style="-fx-background-color: #272730;" styleClass="sidebar" stylesheets="stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
@@ -116,7 +118,17 @@
             <Label layoutX="52.0" layoutY="109.0" prefHeight="58.0" prefWidth="152.0" text="We give you everything you need for a productive day" textAlignment="CENTER" textFill="#7b7d88" wrapText="true" />
             <JFXButton layoutX="103.0" layoutY="28.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-radius: 20px;" text=" " textFill="#8875f9">
                <graphic>
-                  <WeatherIconView fill="linear-gradient(from 25% 25% to 100% 100%, #8875f9, #FE67C3)" glyphName="ALIEN" size="40" wrappingWidth="23.400001049041748" />
+                  <WeatherIconView glyphName="ALIEN" size="40" wrappingWidth="23.400001049041748">
+                     <fill>
+                        <LinearGradient endY="0.7290076554276561" startX="0.3463740458015267">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#8875f9" offset="0.007633587786259542" />
+                              <Stop color="#8674f7" offset="0.34184356373522945" />
+                              <Stop color="#fe67c3" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill></WeatherIconView>
                </graphic>
             </JFXButton>
          </children>
