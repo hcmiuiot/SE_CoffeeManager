@@ -7,7 +7,7 @@
 .default-color1.chart-series-area-line { -fx-stroke: #f0e68c; }
 .default-color0.chart-series-area-line {
     -fx-stroke: linear-gradient(from 25% 25% to 100% 100%, #8875f9, #FE67C3);
-    -fx-stroke-width: 3px;
+    -fx-stroke-width: 4px;
 }
 
 .default-color2.chart-series-area-fill { -fx-fill: #ffa07a55; }
