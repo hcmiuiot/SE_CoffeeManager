@@ -63,7 +63,7 @@ public class DrinksController implements Initializable {
         try {
             while (result.next()) {
                 fxml = FXMLLoader.load(getClass().getResource("item.fxml"));
-                System.out.println("chay di ma lam on ");
+                //System.out.println("chay di ma lam on ");
                 container.getChildren().add(fxml);
             }
             scroll_pane.setContent(container);
