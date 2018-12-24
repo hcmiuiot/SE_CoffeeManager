@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -103,13 +104,26 @@ public class LoginController {
                 password = result.getString("PassWord");
                 System.out.println(password);
                 if (psw.getText().equals(password)) {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
                     Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
                     Scene scene = new Scene(root);
                     Launch.stage.setScene(scene);
                     Launch.stage.setResizable(true);
                     Launch.stage.show();
                 }
+               else {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
+                    al.setTitle("Wrong username or password");
+                    al.setHeaderText("Invalid username or password");
+                    al.setContentText("Please input correct username and password");
+                    al.show();
+                }
             }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("Wrong username or password");
+            al.setHeaderText("Invalid username or password");
+            al.setContentText("Please input correct username and password");
+            al.show();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
